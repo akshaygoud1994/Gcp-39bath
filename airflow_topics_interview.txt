@@ -1,0 +1,42 @@
+Airflow topics for interview:
+-----------------------------
+what is airflow - 
+features,Principels
+GCP Composer? features?
+job & tasks dependcies
+crontab * * * * *
+----------------------
+1. import airflow packages
+2. global variable declaration/ properties file
+3. default args
+4. DAG function
+5. Define all required Tasks
+6. set up dependencies
+
+PythonOperator, BranchPython, BashOperator, DummyOperator, hook, sensor, Shortsercute, XCom pull, Xcom Push,.......
+5 to 10 GCP operators - gcs, bq , dataproc, GCStoBQ
+composer folder structure in GCS bucket - dags,data,logs,plugins
+***log folder/ web application logs
+*airflow.cfg
+create airflow/composer cluster
+airflow UI/ web server explore***
+xcom pull, xcom push
+dag dependcies with other dag
+pyspark in airflow
+
+t1 >> [t2,t3] >> t4
+
+Assignment
+---------
+A. create a bucket, and copy a files
+B. Airflow DAG:-
+t0. dummyOperator
+t1. create new bucket
+t2. copy datafile to new bucket
+t3. create empty dataset(stg,hist) in BQ - PythonOperator
+t4. create BQ table with schema
+t5. GCStoBQOperator to load data 
+t6. create Hist table
+t7. Insert data with transformations in hist
+t8. dummyOperator
+   
